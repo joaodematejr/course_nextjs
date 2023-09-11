@@ -27,3 +27,36 @@ console.log(typeof hobbies)
 // object
 
 hobbies = [100, 200, 300]
+
+
+// tuplas
+let endereco: [string, number, string] = ["Av Principal", 99, ""]
+console.log(endereco)
+
+endereco = ["Rua Importante", 1260, "Bloco C"]
+console.log(endereco)
+
+// enums
+enum Cor {
+    Cinza, // 0
+    Verde = 100, // 100
+    Azul = 10, // 2
+    Laranja,
+    Amarelo,
+    Vermelho = 100
+}
+
+let minhaCor: Cor = Cor.Verde
+console.log(minhaCor)
+
+console.log(Cor.Azul)
+console.log(Cor.Laranja, Cor.Amarelo)
+
+console.log(Cor.Vermelho)
+
+// any
+let carro: any = 'BMW'
+console.log(carro)
+carro = { marca: 'BMW', ano: 2019 }
+console.log(carro)
+
