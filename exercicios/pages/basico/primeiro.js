@@ -1,3 +1,4 @@
+// JSX
 export default function primeiro() {
-    return "Primeiro"
+  return <h1>OLA MUNDO</h1>;
 }

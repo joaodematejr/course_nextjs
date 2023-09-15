@@ -1,3 +1,4 @@
+// JSX
 export default function primeiro() {
-    return "Primeiro"
+  return <h1>jsx1</h1>;
 }
