@@ -1,12 +1,13 @@
-import Presente from '@/components/Presente'
-import { Inter } from 'next/font/google'
+import Presente from "@/components/Presente";
+import Porta from "@/components/Porta";
+import { Inter } from "next/font/google";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
     <>
-      <Presente />
+      <Porta />
     </>
-  )
+  );
 }
