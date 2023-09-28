@@ -5,6 +5,10 @@
   height: 100vh;
 }
 
+.formulario > div {
+  display: flex;
+}
+
 .link {
   display: flex;
   justify-content: center;
@@ -14,4 +18,6 @@
   text-decoration: none;
   font-size: 1.5rem;
   margin: 10px;
+  cursor: pointer;
 }
+
