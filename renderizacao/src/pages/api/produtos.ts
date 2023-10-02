@@ -5,23 +5,28 @@ type Data = {
   name: string;
 };
 
+function numeroAleatorio(min = 1, max = 10000) {
+  return parseInt(Math.random() * (max - min) + min);
+  
+}
+
 export default function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
   res.status(200).json([
     {
-      id: 1,
+      id: numeroAleatorio(),
       nome: "Caneta",
       preco: 5.6,
     },
     {
-      id: 2,
+      id: numeroAleatorio(),
       nome: "Caderno",
       preco: 10.6,
     },
     {
-      id: 3,
+      id: numeroAleatorio(),
       nome: "Borracha",
       preco: 2.6,
     },
