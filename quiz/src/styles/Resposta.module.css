@@ -1,34 +1,47 @@
- .resposta {
-    display: flex;
- }
+.resposta {
+  display: flex;
+  min-width: 500px;
+  width: 80%;
+  align-self: stretch;
+  height: 100px;
+  margin: 10px;
+}
 
- .frente .verso {
-    display: flex;
- }
+.conteudoResposta {
+  position: relative;
+  display: flex;
+  flex: 1;
+}
 
- .frente {
-    align-items: center;
-    border-radius: 12px;
-    padding: 15px;
-    color: #333;
-    background-color: #FFF;
+.frente .verso {
+  position: absolute;
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
 
- }
+.frente {
+  display: flex;
+  align-items: center;
+  border-radius: 12px;
+  padding: 15px;
+  color: #333;
+  background-color: #fff;
+}
 
- .letra {
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    height: 40px;
-    width: 40px;
-    border-radius: 20px;
-    font-size: 1.3rem;
-    font-weight: 700;
-    margin-right: 20px;
- }
+.letra {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-right: 20px;
+}
 
- .valor {
-    font-size: 1.3rem;
-    font-weight: 700;
-
- }
+.valor {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
