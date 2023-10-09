@@ -1,24 +1,13 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-import type { NextApiRequest, NextApiResponse } from "next";
-import questoes from "../bancoDeQuestoes";
+import questoes from '../bancoDeQuestoes'
+export default function questoesProId(req, res) {
+    const idSelecionado = +req.query.id
 
-type Data = {
-  name: string;
-};
+    const unicaQuestaoOuNada = questoes.filter(questao => questao.id === idSelecionado)
 
-export default function handler(
-  req: NextApiRequest,
-  res: NextApiResponse<Data>
-) {
-  const idSelecionado = +req.query.id;
-  const questoesSelecionado = questoes.filter((questao) => questao.id === idSelecionado);
-  
-  if (questoesSelecionado.length === 1) {
-    const questaoSelecionado = questoesSelecionado[0].embaralharRespostas();
-    res.status(200).json(questaoSelecionado.paraObjeto());
-  }else {
-    res.status(204).send();
-  }
-  
-  
+    if (unicaQuestaoOuNada.length === 1) {
+        const questaoSelecionada = unicaQuestaoOuNada[0].embaralharRespostas()
+        res.status(200).json(questaoSelecionada.paraObjeto())
+    } else {
+        res.status(204).send()
+    }
 }
