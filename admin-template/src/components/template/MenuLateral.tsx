@@ -1,7 +1,13 @@
+import MenuItem from "./MenuItem";
+
 export default function MenuLateral() {
   return (
     <aside>
-      <h1>Menu</h1>
+      <ul>
+        <MenuItem url={"/"} text={"Inicio"} icon={undefined} />
+        <MenuItem url={"/ajustes"} text={"Ajustes"} icon={undefined} />
+        <MenuItem url={"/notificacoes"} text={"Notificações"} icon={undefined} />
+      </ul>
     </aside>
   );
 }
