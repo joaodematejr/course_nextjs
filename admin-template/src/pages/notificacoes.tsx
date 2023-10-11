@@ -1,16 +1,15 @@
-import Image from "next/image";
-import { Inter } from "next/font/google";
 import { Layout } from "@/components/template/Layout";
-
-const inter = Inter({ subsets: ["latin"] });
+import useAppData from "@/data/hook/useAppData";
 
 export default function Notificacoes() {
+  const ctx = useAppData();
+
   return (
     <Layout
       titulo="Notificações"
       subtitulo={"Aqui você irá gerenciar as suas Notificações"}
     >
-      <h3 className="text-white">000000</h3>
+      <h3 className="text-white">{ctx.name}</h3>
     </Layout>
   );
 }
