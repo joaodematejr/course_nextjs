@@ -1,23 +1,31 @@
-import { Cabecalho } from "./Cabecalho";
-import MenuLateral from "./MenuLateral";
-import { Conteudo } from "./Conteudo";
-import useAppData from "@/data/hook/useAppData";
+import MenuLateral from './MenuLateral'
+import Cabecalho from './Cabecalho'
+import Conteudo from './Conteudo'
+import ForcarAutenticacao from '../auth/ForcarAutenticacao'
+import useAppData from '../../data/hook/useAppData'
 
 interface LayoutProps {
-  titulo: string;
-  subtitulo: string;
-  children?: any;
+    titulo: string
+    subtitulo: string
+    children?: any
 }
 
-export function Layout(props: LayoutProps) {
-  const { tema } = useAppData();
-  return (
-    <div className={`${tema} dark flex h-screen w-screen`}>
-      <MenuLateral />
-      <div className="flex flex-col bg-red-50 w-full p-7 dark:bg-gray-800">
-        <Cabecalho titulo={props.titulo} subtitulo={props.subtitulo} />
-        <Conteudo>{props.children}</Conteudo>
-      </div>
-    </div>
-  );
+export default function Layout(props: LayoutProps) {
+    const { tema } = useAppData()
+    return (
+        <ForcarAutenticacao>
+            <div className={`${tema} flex h-screen w-screen`}>
+                <MenuLateral />
+                <div className={`
+                flex flex-col w-full p-7 
+                bg-gray-300 dark:bg-gray-800
+            `}>
+                    <Cabecalho titulo={props.titulo} subtitulo={props.subtitulo} />
+                    <Conteudo>
+                        {props.children}
+                    </Conteudo>
+                </div>
+            </div>
+        </ForcarAutenticacao>
+    )
 }

@@ -1,15 +1,15 @@
-interface LogoProps {
-  children?: any;
-}
-
-export function Logo(props: LogoProps) {
-  return (
-    <div className="flex flex-col bg-white h-14 w-14 rounded-full">
-      <div className="h-3 w-3 rounded-full bg-red-800"></div>
-      <div className="flex">
-        <div className="h-3 w-3 rounded-full bg-teal-800"></div>
-        <div className="h-3 w-3 rounded-full bg-yellow-800"></div>
-      </div>
-    </div>
-  );
+export default function Logo() {
+    return (
+        <div className={`
+            flex flex-col items-center justify-center
+            h-12 w-12 rounded-full
+            bg-white
+        `}>
+            <div className="h-3 w-3 rounded-full bg-red-600 mb-0.5" />
+            <div className="flex mt-0.5">
+                <div className="h-3 w-3 rounded-full bg-yellow-500 mr-0.5" />
+                <div className="h-3 w-3 rounded-full bg-green-600 ml-0.5" />
+            </div>
+        </div>
+    )
 }
